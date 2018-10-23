@@ -1,0 +1,26 @@
+
+for example：
+text = re.sub('回复.*?:', '', text)
+source = re.sub('<.*?>|</a>', '', str(st.source))
+
+e.g.
+text	"回复<a href='https://m.weibo.cn/n/糖小小姐'>@糖小小姐</a>:还没有相拥别意外　神教会我等待"
+
+https://blog.csdn.net/sinat_34719507/article/details/54319905
+
+* : 匹配前面的子表达式任意次
+. : 匹配除“\r\n”之外的任何单个字符。要匹配包括“\r\n”在内的任何字符，请使用像“[\s\S]”的模式。
+? : 当该字符紧跟在任何一个其他限制符（*,+,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“oooo”，“o+”将匹配每个“o”即4次匹配，而“o+?”将只匹配1次即匹配“oooo”。
+?: pattern: 非获取匹配，匹配pattern但不获取匹配结果，不进行存储供以后使用。这在使用或字符“(|)”来组合一个模式的各个部分时很有用。例如“industr(?:y|ies)”就是一个比“industry|industries”更简略的表达式。
+
+
+#
+u'[\U00010000-\U0010FFFF]'
+These expressions strip out the emojis
+
+
+--------------------- 
+作者：卡特酋长 
+来源：CSDN 
+原文：https://blog.csdn.net/sinat_34719507/article/details/54319905 
+版权声明：本文为博主原创文章，转载请附上博文链接！
